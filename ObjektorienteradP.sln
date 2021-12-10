@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjektorienteradP.UI.Console", "ObjektorienteradP.UI.Console\ObjektorienteradP.UI.Console.csproj", "{E2605802-160B-4E97-956F-E32A055FC82D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjektorienteradP.DL", "ObjektorienteradP.DL\ObjektorienteradP.DL.csproj", "{0D6038B6-D6A0-467B-B51D-46F980131FB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E2605802-160B-4E97-956F-E32A055FC82D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2605802-160B-4E97-956F-E32A055FC82D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2605802-160B-4E97-956F-E32A055FC82D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D6038B6-D6A0-467B-B51D-46F980131FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D6038B6-D6A0-467B-B51D-46F980131FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D6038B6-D6A0-467B-B51D-46F980131FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D6038B6-D6A0-467B-B51D-46F980131FB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
