@@ -43,15 +43,15 @@ public class Person
 
     public string Name { get => $"{FName} {lName}"; }
 
-    private int height;
-    public int Height
+    private double height;
+    public double Height
     {
         get => height;
         set => height = value;
     }
 
-    private int weight;
-    public int Weight
+    private double weight;
+    public double Weight
     {
         get => weight;
         set => weight = value;
@@ -64,8 +64,7 @@ public class Person
         LName = lName;
     }
 
-    public override string ToString()
-    {
-        return $"{this.Name} är {Age} år gammal, {height}cm lång och {weight} kilo";
-    }
+    public override string ToString() =>
+        $"{this.Name} är {Age} år gammal, {height.ToString("0.0")}cm lång och {weight.ToString("0.0")} kilo";
+
 }
