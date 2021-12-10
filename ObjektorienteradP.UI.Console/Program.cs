@@ -11,14 +11,14 @@ Person person = new(age: 32, fName: "Filip", lName: "Johnsson");
 //person.age = 2; // Compiler Error: 'Person.age' is inaccessible due to its protection level
 
 // Man kammer bara direkt åt publika properties.
-person.Height = 172;
-Console.WriteLine(person.Height); // Output: 172
+person.Height = 172.5;
+Console.WriteLine(person.Height); // Output: 172.5
 
 try
 {
-    //person.Age = 0;
+    person.Age = 0;
     //person.FName = string.Empty;
-    person.LName = "";
+    //person.LName = "";
 
 }
 catch (ArgumentException ex) when (ex.ParamName == "Ålder")
