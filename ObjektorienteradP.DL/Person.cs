@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-namespace ObjektorienteradP.DL;
+﻿namespace ObjektorienteradP.DL;
 
 public class Person
 {
