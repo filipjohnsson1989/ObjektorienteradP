@@ -1,6 +1,6 @@
 ﻿namespace ObjektorienteradP.DL;
 
-internal class Person
+public class Person
 {
     private uint age;
     private string? fName;
