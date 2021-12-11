@@ -1,11 +1,43 @@
 using Xunit;
 using ObjektorienteradP.BL;
 using System;
+using ObjektorienteradP.DL;
 
 namespace ObjektorienteradP.BLTest;
 
 public class PersonHandlerTest
 {
+    [Fact]
+    public void CreatePerson_Valid()
+    {
+        // Arrange
+        PersonHandler personHandler = new();
+        uint expectedAge = 32;
+        string expectedFName = "Filip";
+        string expectedLName = "Johnsson";
+        double expectedHeight = 172.5;
+        double expectedWeight = 96.5;
+
+        // Act
+        Person? person = personHandler.CreatePerson(age: expectedAge,
+                                                    fName: expectedFName,
+                                                    lName: expectedLName,
+                                                    height: expectedHeight,
+                                                    weight: expectedWeight);
+        uint actualAge = person.Age;
+        string actualFName = person.FName;
+        string actualLname = person.LName;
+        double actualHeight = person.Height;
+        double actualWeight = person.Weight;
+
+        // Assert
+        Assert.Equal(expectedAge, actualAge);
+        Assert.Equal(expectedFName, actualFName);
+        Assert.Equal(expectedLName, actualLname);
+        Assert.Equal(expectedHeight, actualHeight);
+        Assert.Equal(expectedWeight, actualWeight);
+    }
+
     [Fact]
     public void SetAge_InValid0_ShouldError()
     {
