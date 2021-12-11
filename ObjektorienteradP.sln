@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjektorienteradP.UI.Console", "ObjektorienteradP.UI.Console\ObjektorienteradP.UI.Console.csproj", "{E2605802-160B-4E97-956F-E32A055FC82D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjektorienteradP.UI.Console", "ObjektorienteradP.UI.Console\ObjektorienteradP.UI.Console.csproj", "{E2605802-160B-4E97-956F-E32A055FC82D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjektorienteradP.DL", "ObjektorienteradP.DL\ObjektorienteradP.DL.csproj", "{0D6038B6-D6A0-467B-B51D-46F980131FB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjektorienteradP.DL", "ObjektorienteradP.DL\ObjektorienteradP.DL.csproj", "{0D6038B6-D6A0-467B-B51D-46F980131FB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjektorienteradP.Common", "ObjektorienteradP.Common\ObjektorienteradP.Common.csproj", "{4031B97A-B543-42EB-90BF-29802916F30B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjektorienteradP.Common", "ObjektorienteradP.Common\ObjektorienteradP.Common.csproj", "{4031B97A-B543-42EB-90BF-29802916F30B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjektorienteradP.BL", "ObjektorienteradP.BL\ObjektorienteradP.BL.csproj", "{EF1F5C50-4EF8-49A8-960D-C18257AA5431}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjektorienteradP.BL", "ObjektorienteradP.BL\ObjektorienteradP.BL.csproj", "{EF1F5C50-4EF8-49A8-960D-C18257AA5431}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9DC61BAA-612C-4BC8-B43E-F8E81E2A7ED0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjektorienteradP.BLTest", "Tests\ObjektorienteradP.BLTest\ObjektorienteradP.BLTest.csproj", "{57F3A7DF-5E4D-4A5D-9EC1-0A6DDFCDE7D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +37,16 @@ Global
 		{EF1F5C50-4EF8-49A8-960D-C18257AA5431}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF1F5C50-4EF8-49A8-960D-C18257AA5431}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF1F5C50-4EF8-49A8-960D-C18257AA5431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57F3A7DF-5E4D-4A5D-9EC1-0A6DDFCDE7D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F3A7DF-5E4D-4A5D-9EC1-0A6DDFCDE7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F3A7DF-5E4D-4A5D-9EC1-0A6DDFCDE7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F3A7DF-5E4D-4A5D-9EC1-0A6DDFCDE7D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{57F3A7DF-5E4D-4A5D-9EC1-0A6DDFCDE7D3} = {9DC61BAA-612C-4BC8-B43E-F8E81E2A7ED0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {34995548-6D47-4024-95BB-90DC5F99AFF0}
