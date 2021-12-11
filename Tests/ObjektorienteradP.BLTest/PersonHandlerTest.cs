@@ -25,8 +25,8 @@ public class PersonHandlerTest
                                                     height: expectedHeight,
                                                     weight: expectedWeight);
         uint actualAge = person.Age;
-        string actualFName = person.FName;
-        string actualLname = person.LName;
+        string? actualFName = person.FName;
+        string? actualLname = person.LName;
         double actualHeight = person.Height;
         double actualWeight = person.Weight;
 
