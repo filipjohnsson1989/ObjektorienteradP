@@ -18,7 +18,7 @@ Console.WriteLine(filip.Height); // Output: 172.5
 
 try
 {
-    //person.Age = 0;
+    person.Age = 0;
     //person.FName = string.Empty;
     //person.LName = "";
 }
@@ -47,14 +47,14 @@ var filippa = personHandler.CreatePerson(age : 35, fName : "filippa", lName : "j
 Console.WriteLine(filippa.ToString());
 #endregion Inkapsling3
 
-#region Inkapsling4
+#region Inkapsling5
 personHandler.SetAge(filippa, 34);
 personHandler.SetFName(filippa, "Filippa");
 personHandler.SetLName(filippa, "Johnsson");
 personHandler.SetHeight(filippa, 164);
 personHandler.SetWeight(filippa, 64);
 Console.WriteLine(filippa.ToString());
-#endregion Inkapsling4
+#endregion Inkapsling5
 
 
 Console.ReadLine();
