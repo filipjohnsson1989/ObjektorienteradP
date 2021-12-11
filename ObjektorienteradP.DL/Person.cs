@@ -1,5 +1,6 @@
 ﻿namespace ObjektorienteradP.DL;
 
+//Inkapsling1
 public class Person
 {
     private uint age;
@@ -57,11 +58,18 @@ public class Person
         set => weight = value;
     }
 
-    public Person(uint age, string fName, string lName)
+    public Person()
+    {
+
+    }
+
+    public Person(uint age, string fName, string lName, double height, double weight)
     {
         Age = age;
         FName = fName;
         LName = lName;
+        Height = height;
+        Weight = weight;
     }
 
     public override string ToString() =>
