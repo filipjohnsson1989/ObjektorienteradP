@@ -67,3 +67,15 @@ catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
 }
+
+
+#region Arg
+// 13. F: Om vi under utvecklingen kommer fram till att samtliga fåglar behöver ett nytt attribut, ivilken klass bör vi lägga det?
+// Det nya attributet bör lägga i den Bird klassen.
+// Titta på ToDo listen eller den Bird Klassen!
+
+
+// 14. F: Om alla djur behöver det nya attributet, vart skulle man lägga det då?
+// Det nya attributet bör lägga i den Animal klassen.
+// Titta på ToDo listen eller den Animal Klassen!
+#endregion
