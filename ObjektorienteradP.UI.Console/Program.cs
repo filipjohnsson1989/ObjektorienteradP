@@ -7,6 +7,7 @@ Console.WriteLine("Objektorienterad programmering!");
 
 #region Inkapsling1
 // Kommer du direktåt variablerna?
+// Avkomentera också konstruktoren!!!
 //Person filip = new() { Age = 32, FName = "Filip", LName = "Johnsson" };
 
 // Man kammer inte åt de variabelen som privata fält.

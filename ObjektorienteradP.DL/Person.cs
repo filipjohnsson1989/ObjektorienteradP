@@ -58,10 +58,10 @@ public class Person
         set => weight = value;
     }
 
-    public Person()
-    {
+    //public Person()
+    //{
 
-    }
+    //}
 
     public Person(uint age, string fName, string lName, double height, double weight)
     {
