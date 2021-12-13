@@ -22,4 +22,7 @@ public abstract class Animal
     public abstract void DoSound();
 
     public virtual string Stats() => $"Name:{Name} Age:{Age} Weight:{Weight}";
+
+    public virtual string PlayString() => $"Jag som djur lekar med dig!!!";
+
 }

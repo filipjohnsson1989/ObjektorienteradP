@@ -1,11 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ObjektorienteradP.BL;
+using ObjektorienteradP.Common;
 using ObjektorienteradP.Common.Types;
 using ObjektorienteradP.DL;
 //using ObjektorienteradP.DL;
 
 
-Console.WriteLine("Objektorienterad programmering!");
+Console.WriteLine("Objektorienterad programmering!\n\r");
+
+#region 1-Inkapsling
+Console.WriteLine(new String('-', 20).AddString("\n\r1-Inkapsling\n\r"));
 
 #region Inkapsling1
 // Kommer du direktåt variablerna?
@@ -68,9 +72,11 @@ catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
 }
+#endregion
 
+#region 2-Arv
+Console.WriteLine(new String('-', 20).AddString("\n\r2-Arv\n\r"));
 
-#region Arg
 // 13. F: Om vi under utvecklingen kommer fram till att samtliga fåglar behöver ett nytt attribut, ivilken klass bör vi lägga det?
 // Det nya attributet bör lägga i den Bird klassen.
 // Titta på ToDo listen eller den Bird Klassen!
@@ -79,9 +85,13 @@ catch (Exception ex)
 // 14. F: Om alla djur behöver det nya attributet, vart skulle man lägga det då?
 // Det nya attributet bör lägga i den Animal klassen.
 // Titta på ToDo listen eller den Animal Klassen!
+
+Console.WriteLine("Ej Skrivning ut");
 #endregion
 
-
+#region 3-Polymorfism
+Console.WriteLine(new String('-', 20).AddString("\n\r3-Polymorfism\n\r"));
+#region Polymorfism1-7
 List<Animal> animals = new();
 
 Bird bired1 = new(name: "Fågel1", age: 1, weight: 11, wingSpan: 1.1);
@@ -116,6 +126,76 @@ Worm worm1 = new(name: "Mask1", age: 10, weight: 100, isPoisonous: true);
 animals.Add(worm1);
 
 foreach (var animal in animals)
-    Console.WriteLine(animal.Stats());
+{
+    Console.WriteLine(animal.GetType().Name);
+    animal.DoSound();
+
+    if (animal is WolfMan wolfMan) wolfMan.Talk();
+
+}
+#endregion
+
+#region Polymorfism8-10
+List<Dog> dogs = new();
+
+Dog dog2 = new(name: "Hund2", age: 52, weight: 552, registrationNr: "SDIS");
+dogs.Add(dog2);
+
+Dog dog3 = new(name: "Hund3", age: 53, weight: 553, registrationNr: "TDIS");
+dogs.Add(dog3);
+
+Dog dog4 = new(name: "Hund4", age: 54, weight: 554, registrationNr: "FODIS");
+dogs.Add(dog4);
+
+// 9.F: Försök att lägga till en häst i listan av hundar. Varför fungerar inte det?
+// Nej, det fungerar det inte. Eftersom de två klasser inte är samma typ.
+// Horse klassen måste har ett arv från Dog klassen att lägga till listen annars får det inte.
+// dogs.Add(hors1);
+
+// F: Vilken typ måste listan vara för att alla klasser skall kunna lagras tillsammans?
+// Listen måste vara en typ av Animal Klassen för att alla klasser skall kunna lagras tillsammans.
+List<Animal> animalList = new();
+animalList.AddRange(dogs);
+animalList.Add(hors1);
+
+#endregion
+
+#region Polymorfism11-
+Console.WriteLine("djurs stats\n\r");
+// 11.Skriv ut samtligaAnimalsStats()genom en foreachloop.
+foreach (var animal in animals) Console.WriteLine(animal.Stats());
+
+// 12.Testa och se så det fungerar.
+// Vi användar fördelar av Polymorfism.
+
+Console.WriteLine("hunds stats\n\r");
+// 14.Skriv utStats()metoden enbart för alla hundar genomen foreach på Animals.
+foreach (var animal in animals)
+{
+    if (animal is Dog dog) Console.WriteLine(dog.Stats());
+
+    // 15.Skapa en ny metod med valfritt namn  i klassen Dog som endast returnerar en valfri sträng.
+    // Den nya metoden heter PlayString som finns i klassen Dog
+
+    // 16.Kommer du åt den metoden frånAnimalslistan?
+    // Nej, det gör jag inte.
+    // Console.WriteLine(animal.PlayString());
+
+    // 17.F: Varför inte?
+    // Den nya metoden är egna method av klassen Dog.
+    // Det finns inte signuture eller impelement of den metoden i klassen Animal.
+    // Den metoden bör vara en metod som abstract eller virtual och sedan man kan ovrrida den metoden i klassen Dog.
+    // Om vi vill, har vi access till normala methoder i animal men vi kan inte override den i derived klasser som klassen Dag.
+
+    // 18.Hitta ett sätt att skriva ut din nya metod för dog genom en foreach på Animals.
+    // Jag kör med en ny virtual metod i klassen animal.
+    // Den nya metoden är inte obligatorisk att impelementera till andra derived klasser av klassen Animal.
+    // Jag overrida metoden i klassen Dog.
+    // Nu har vi access till metoden
+    Console.WriteLine(animal.PlayString());
+}
+#endregion
+
+#endregion
 
 Console.ReadLine();
