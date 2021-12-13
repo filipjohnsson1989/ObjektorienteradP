@@ -1,9 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using ObjektorienteradP.BL;
 using ObjektorienteradP.Common;
 using ObjektorienteradP.Common.Types;
 using ObjektorienteradP.DL;
-//using ObjektorienteradP.DL;
+using ObjektorienteradP.BL;
 
 
 Console.WriteLine("Objektorienterad programmering!\n\r");
@@ -160,7 +159,7 @@ animalList.Add(hors1);
 
 #endregion
 
-#region Polymorfism11-
+#region Polymorfism11-18
 Console.WriteLine("djurs stats\n\r");
 // 11.Skriv ut samtligaAnimalsStats()genom en foreachloop.
 foreach (var animal in animals) Console.WriteLine(animal.Stats());
@@ -195,6 +194,18 @@ foreach (var animal in animals)
     Console.WriteLine(animal.PlayString());
 }
 #endregion
+
+#endregion
+
+#region 4-Polymorfism
+Console.WriteLine(new String('-', 20).AddString("\n\r4-Polymorfism\n\r"));
+
+List<UserError> errors = new();
+errors.Add(new NumericInputError());
+errors.Add(new TextInputError());
+errors.Add(new DecimalInputError());
+
+foreach (var error in errors) Console.WriteLine(error.UEMessage());
 
 #endregion
 
