@@ -15,5 +15,5 @@ public class Dog : Animal
 
     public override string Stats() => $"{base.Stats()} RegistrationNr:{RegistrationNr}";
 
-    public override string PlayString() => $"Jag som hund lekar med dig!!!";
+    public override string PlayString() => $"Jag som \"Hund\" leker med dig!!!";
 }
