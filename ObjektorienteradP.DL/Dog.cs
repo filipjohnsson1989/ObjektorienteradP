@@ -12,4 +12,6 @@ public class Dog : Animal
     {
         Console.WriteLine("Hunds låten");
     }
+
+    public override string Stats() => $"{base.Stats()} RegistrationNr:{RegistrationNr}";
 }

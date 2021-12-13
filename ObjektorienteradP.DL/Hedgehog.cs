@@ -13,4 +13,6 @@ public class Hedgehog : Animal
         Console.WriteLine("Igelkotts låten");
 
     }
+    public override string Stats() => $"{base.Stats()} NrOfSpikes:{NrOfSpikes}";
+
 }

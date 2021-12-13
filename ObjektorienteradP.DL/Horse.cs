@@ -14,4 +14,7 @@ public class Horse : Animal
     {
         Console.WriteLine("Hästs låten");
     }
+
+    public override string Stats() => $"{base.Stats()} Horseshoe:{Horseshoe}";
+
 }

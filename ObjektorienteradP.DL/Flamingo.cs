@@ -12,4 +12,7 @@ public class Flamingo : Bird
     {
         Console.WriteLine("Felamingos låten");
     }
+
+    public override string Stats() => $"{base.Stats()} FlamingosUniqueProperty:{FlamingosUniqueProperty}";
+
 }

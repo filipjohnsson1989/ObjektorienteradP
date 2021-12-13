@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ObjektorienteradP.BL;
+using ObjektorienteradP.Common.Types;
+using ObjektorienteradP.DL;
 //using ObjektorienteradP.DL;
 
 
@@ -61,7 +63,6 @@ try
     Console.WriteLine(filippa.ToString());
     #endregion 
 
-    Console.ReadLine();
 }
 catch (Exception ex)
 {
@@ -79,3 +80,42 @@ catch (Exception ex)
 // Det nya attributet bör lägga i den Animal klassen.
 // Titta på ToDo listen eller den Animal Klassen!
 #endregion
+
+
+List<Animal> animals = new();
+
+Bird bired1 = new(name: "Fågel1", age: 1, weight: 11, wingSpan: 1.1);
+animals.Add(bired1);
+
+Flamingo flamingo1 = new(name: "Flamingo1", age: 2, weight: 22, wingSpan: 1.2, flamingosUniqueProperty: 1);
+animals.Add(flamingo1);
+
+Swan swan1 = new(name: "Svan1", age: 3, weight: 33, wingSpan: 1.3, swansUniqueProperty: 2);
+animals.Add(swan1);
+
+Pelican pelikan1 = new(name: "Pelikan1", age: 4, weight: 44, wingSpan: 1.4, pelicansUniquePeroperty: 3);
+animals.Add(pelikan1);
+
+
+Dog dog1 = new(name: "Hund1", age: 5, weight: 55, registrationNr: "FDIS");
+animals.Add(dog1);
+
+Hedgehog hedgehog1 = new(name: "Hedgehog1", age: 6, weight: 66, NrOfSpikes: 666);
+animals.Add(hedgehog1);
+
+Horse hors1 = new(name: "Häst1", age: 7, weight: 77, horseshoe: Horseshoe.Steel);
+animals.Add(hors1);
+
+Wolf wolf1 = new(name: "Varg1", age: 8, weight: 88, isAlpha: false);
+animals.Add(wolf1);
+
+WolfMan wolfMan1 = new(name: "Vargman1", age: 9, weight: 99, isAlpha: true);
+animals.Add(wolfMan1);
+
+Worm worm1 = new(name: "Mask1", age: 10, weight: 100, isPoisonous: true);
+animals.Add(worm1);
+
+foreach (var animal in animals)
+    Console.WriteLine(animal.Stats());
+
+Console.ReadLine();

@@ -13,4 +13,7 @@ public class Wolf : Animal
     {
         Console.WriteLine("Vargs låten");
     }
+
+    public override string Stats() => $"{base.Stats()} IsAlpha:{IsAlpha}";
+
 }

@@ -15,4 +15,6 @@ public class Worm : Animal
     {
         Console.WriteLine("Masks låten");
     }
+    public override string Stats() => $"{base.Stats()} IsPoisonous:{IsPoisonous}";
+
 }

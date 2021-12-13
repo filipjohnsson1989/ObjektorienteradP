@@ -12,4 +12,7 @@ public class Swan : Bird
     {
         Console.WriteLine("Svans låten");
     }
+
+    public override string Stats() => $"{base.Stats()} SwansUniqueProperty:{SwansUniqueProperty}";
+
 }

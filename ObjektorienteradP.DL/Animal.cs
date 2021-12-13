@@ -1,4 +1,6 @@
-﻿namespace ObjektorienteradP.DL;
+﻿using ObjektorienteradP.Common;
+
+namespace ObjektorienteradP.DL;
 
 public abstract class Animal
 {
@@ -18,4 +20,6 @@ public abstract class Animal
         //this.NewAnimalProperty = newAnimalProperty;
     }
     public abstract void DoSound();
+
+    public virtual string Stats() => $"Name:{Name} Age:{Age} Weight:{Weight}";
 }

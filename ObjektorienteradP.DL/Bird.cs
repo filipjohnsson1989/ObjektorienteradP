@@ -18,4 +18,6 @@ public class Bird : Animal
     {
         Console.WriteLine("Fågels låten");
     }
+
+    public override string Stats() => $"{base.Stats()} WingSpan:{WingSpan}";
 }

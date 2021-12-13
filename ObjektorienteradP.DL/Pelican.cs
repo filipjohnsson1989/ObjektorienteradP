@@ -12,4 +12,7 @@ public class Pelican : Bird
     {
         Console.WriteLine("Pelikans låten");
     }
+
+    public override string Stats() => $"{base.Stats()} PelicansUniquePeroperty:{PelicansUniquePeroperty}";
+
 }
